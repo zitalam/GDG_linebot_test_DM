@@ -1,8 +1,6 @@
-python-dotenv
-flask
+Flask
 line-bot-sdk
-lxml
-gunicorn
-pymongo
-imgurpython
+python-dotenv
 requests
+beautifulsoup4
+lxml
