@@ -161,7 +161,7 @@ def generate_response(user_message):
     
     # 問候語
     if any(keyword in message_lower for keyword in ['hi', 'hello', '你好', '嗨', '哈囉']):
-        return f"👋 您好！歡迎來到璞門茶！\n\n我可以幫您：\n• 查看菜單（輸入「菜單」）\n• 搜尋產品（輸入產品名稱）\n• 了解更多（輸入「關於」）\n\n或直接訪問我們的官網：\n{WEBSITE_URL}"
+        return f"👋 您好！歡迎來到普門茶品！\n\n我可以幫您：\n• 查看菜單（輸入「菜單」）\n• 搜尋產品（輸入產品名稱）\n• 了解更多（輸入「關於」）\n\n或直接訪問我們的官網：\n{WEBSITE_URL}"
     
     # 菜單/產品查詢
     elif any(keyword in message_lower for keyword in ['menu', '菜單', 'product', '產品', 'tea', '茶', '商品']):
@@ -181,7 +181,7 @@ def generate_response(user_message):
         if website_info: 
             return f"📖 {website_info['title']}\n\n{website_info['description']}\n\n了解更多：\n{WEBSITE_URL}"
         else: 
-            return f"📖 歡迎來到璞門茶！\n\n請訪問我們的官網了解更多：\n{WEBSITE_URL}"
+            return f"📖 歡迎來到普門茶品！\n\n請訪問我們的官網了解更多：\n{WEBSITE_URL}"
     
     # 價格查詢
     elif any(keyword in message_lower for keyword in ['price', '價格', '多少錢', 'how much', '費用']):
@@ -250,3 +250,4 @@ def handle_message(event:  Event):
 
 if __name__ == "__main__": 
     app.run(host='0.0.0.0', port=5000)
+
