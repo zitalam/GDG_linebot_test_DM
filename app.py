@@ -43,8 +43,8 @@ WEBSITE_URL = "https://pumentea.vercel.app/"
 # 具體頁面 URLs（請根據你的網站結構調整）
 PAGE_URLS = {
     'home': 'https://pumentea.vercel.app/',
-    'menu': 'https://pumentea.vercel.app/prodcuts',  # menu 和 products 使用相同地址
-    'products': 'https://pumentea.vercel.app/prodcuts',  # menu 和 products 使用相同地址
+    'menu': 'https://pumentea.vercel.app/products',  # menu 和 products 使用相同地址
+    'products': 'https://pumentea.vercel.app/products',  # menu 和 products 使用相同地址
     'about': 'https://pumentea.vercel.app/about',  # 如果是獨立頁面改為 /about
     'contact': 'https://pumentea.vercel.app/store',  # 如果是獨立頁面改為 /contact
 }
@@ -288,6 +288,7 @@ def handle_message(event:  Event):
 # 應用程序入口點
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
