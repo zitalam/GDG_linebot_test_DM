@@ -187,7 +187,7 @@ def generate_response(user_message):
     
     # 問候語
     if any(keyword in message_lower for keyword in ['hi', 'hello', '你好', '嗨', '哈囉', 'hey', '嘿']):
-        return f"👋 您好！歡迎來到璞門茶！\n\n我可以幫您：\n• 查看菜單（輸入「菜單」）\n• 搜尋產品（輸入產品名稱）\n• 了解關於我們（輸入「關於」）\n• 查詢營業時間（輸入「營業時間」）\n• 查詢地址（輸入「地址」）\n\n🌐 官網首頁：\n{PAGE_URLS['home']}"
+        return f"👋 您好！歡迎來到普門茶品！\n\n我可以幫您：\n• 查看菜單（輸入「菜單」）\n• 搜尋產品（輸入產品名稱）\n• 了解關於我們（輸入「關於」）\n• 查詢營業時間（輸入「營業時間」）\n• 查詢地址（輸入「地址」）\n\n🌐 官網首頁：\n{PAGE_URLS['home']}"
     
     # 菜單/產品查詢 - 使用相同的 menu 地址
     elif any(keyword in message_lower for keyword in ['menu', '菜單', 'product', '產品', 'tea', '茶', '商品', '普門']):
@@ -201,7 +201,7 @@ def generate_response(user_message):
     # 關於我們 - 返回具體 about 頁面
     elif any(keyword in message_lower for keyword in ['about', '關於', '介紹', '簡介', 'about us']):
         website_info = fetch_website_info()
-        response = f"📖 關於璞門茶\n\n"
+        response = f"📖 關於普門茶品\n\n"
         if website_info:  
             if website_info['description']:
                 response += f"{website_info['description']}\n\n"
@@ -288,6 +288,7 @@ def handle_message(event:  Event):
 # 應用程序入口點
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
