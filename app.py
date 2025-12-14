@@ -196,7 +196,7 @@ def generate_response(user_message):
             products_text = "\n• ".join(website_info['products'][:8])  # 顯示前8個項目
             return f"🍵 {website_info['title']}\n\n我們的產品：\n• {products_text}\n\n📋 完整菜單請訪問：\n{PAGE_URLS['menu']}"
         else:
-            return f"🍵 璞門茶菜單\n\n查看完整菜單：\n{PAGE_URLS['menu']}"
+            return f"🍵 普門茶品菜單\n\n查看完整菜單：\n{PAGE_URLS['menu']}"
     
     # 關於我們 - 返回具體 about 頁面
     elif any(keyword in message_lower for keyword in ['about', '關於', '介紹', '簡介', 'about us']):
@@ -288,6 +288,7 @@ def handle_message(event:  Event):
 # 應用程序入口點
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
